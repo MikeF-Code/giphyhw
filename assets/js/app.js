@@ -10,7 +10,7 @@ function renderButtons() {
     $("#searchButtons").html("");
     for (var i = 0; i < topics.length; i++) {
       var topicBtn = $("<button>");
-      topicBtn.addClass("gameButton mr-2");
+      topicBtn.addClass("gameButton mr-2 btn btn-light");
       topicBtn.attr("data-game", topics[i]);
       topicBtn.text(topics[i]);
       $("#searchButtons").append(topicBtn);
@@ -53,7 +53,7 @@ function renderButtons() {
                 var p = $("<p>").text("Rating: " + results[j].rating);
                 var gifImage = $("<img>");
                 gifImage.attr("src", results[j].images.fixed_width_still.url);
-                gifImage.addClass("gif");
+                gifImage.addClass("gif mx-1");
                 gifImage.attr("gifid", [j]);
                 gifImage.attr("data-static", results[j].images.fixed_width_still.url);
                 gifImage.attr("data-anim", results[j].images.fixed_width.url);
